@@ -1,15 +1,16 @@
 """
-Main module to run the Streamlit app.
-This module start the app Streamlit and serve as frontend
-for interacting with the backend flix_api.
+Módulo princial do app.
+Inicia a interface do usuário e serve como frontend
+para interagir com a API de backend.
 """
 
 import streamlit as st
+from genre.page import show_genres
 
 
 def main():
     """
-    Main menu function to run the Streamlit app.
+    Menu principal para mostrar a página selecionada.
     """
     st.title("Flix App")
 
@@ -23,7 +24,7 @@ def main():
         st.write('Start')
 
     if menu_option == 'Genre':
-        st.write('Genre list')
+        show_genres()
 
     if menu_option == 'Actors':
         st.write('Actors list')

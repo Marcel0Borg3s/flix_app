@@ -11,6 +11,7 @@ from login.page import show_login
 from movies.page import show_movies
 from reviews.page import show_reviews
 
+
 def main():
     """
     Confere se está logado e mostra o menu principal para mostrar a página selecionada.

@@ -9,7 +9,7 @@ def login(username, password):
         password=password,
     )
     if response.get('error'):
-        st.error(f'Error in authentication: {response.get("error")}')
+        st.error(f'Invalid username or password: {response.get("error")}')
     else:
         st.session_state.token = response.get('access')
         st.rerun()

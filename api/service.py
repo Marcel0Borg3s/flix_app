@@ -21,7 +21,7 @@ class Auth:
         }
         auth_response = requests.post(
             self.__auth_url,
-            json=auth_payload,
+            data=auth_payload,
         )
         if auth_response.status_code == 200:
             return auth_response.json()

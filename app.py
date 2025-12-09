@@ -6,7 +6,7 @@ para interagir com a API de backend.
 
 import streamlit as st
 from actors.page import show_actors
-from genre.page import show_genres
+from genres.page import show_genres
 from login.page import show_login
 from movies.page import show_movies
 from reviews.page import show_reviews

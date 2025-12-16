@@ -12,7 +12,7 @@ from st_aggrid import AgGrid
 def show_actors():
     actor_service = ActorService()
     actors = actor_service.get_actors()
-        
+
     if actors:
         st.write('Actors List:')
         """
@@ -52,4 +52,3 @@ def show_actors():
             st.rerun()
         else:
             st.error('Error creating actor')
-

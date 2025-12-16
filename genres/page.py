@@ -45,4 +45,3 @@ def show_genres():
             st.rerun()
         else:
             st.error('Error creating genre')
-

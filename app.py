@@ -7,6 +7,7 @@ para interagir com a API de backend.
 import streamlit as st
 from actors.page import show_actors
 from genres.page import show_genres
+from home.page import show_home
 from login.page import show_login
 from movies.page import show_movies
 from reviews.page import show_reviews
@@ -28,7 +29,7 @@ def main():
         )
 
         if menu_option == 'Start':
-            st.write('Start')
+            show_home()
 
         if menu_option == 'Genre':
             show_genres()

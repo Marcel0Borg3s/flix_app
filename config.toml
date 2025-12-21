@@ -1,0 +1,6 @@
+[general]
+app_title = "Flix App"
+app_description = "Flix App is a movie review app"
+app_author = "Marcelo Borges"
+app_version = "1.0.0"   
+

@@ -24,7 +24,7 @@ class ActorRepository:
             logout()
             return None
         raise Exception(f'Error to recive data from API. Status code {response.status_code}')
-    
+
     def get_actor(self, actor_id):
         response = requests.get(
             self.__actors_url,
@@ -39,7 +39,7 @@ class ActorRepository:
         Post nos Generos e checar a validade do token e se vencido, prazo de 1 dia, fará o kikoff do user
         """
         response = requests.post(
-            self.__actors_url, 
+            self.__actors_url,
             headers=self.__headers,
             data=actor,
         )
@@ -49,4 +49,3 @@ class ActorRepository:
             logout()
             return None
         raise Exception(f'Error to recive data from API. Status code {response.status_code}')
-

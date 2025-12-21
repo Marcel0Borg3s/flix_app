@@ -11,7 +11,7 @@ class GenreRepository:
     def __init__(self):
         self.__base_url = 'https://mborges76.pythonanywhere.com/api/v1/'
         self.__genres_url = f'{self.__base_url}/genres/'
-        self.__headers ={
+        self.__headers = {
             'Authorization': f'Bearer {st.session_state.token}'
         }
 
@@ -20,7 +20,7 @@ class GenreRepository:
         Get nos Generos e checar a validade do token e se vencido, prazo de 1 dia, fará o kikoff do user
         """
         response = requests.get(
-            self.__genres_url, 
+            self.__genres_url,
             headers=self.__headers
         )
         if response.status_code == 200:
@@ -34,7 +34,7 @@ class GenreRepository:
         Post nos Generos e checar a validade do token e se vencido, prazo de 1 dia, fará o kikoff do user
         """
         response = requests.post(
-            self.__genres_url, 
+            self.__genres_url,
             headers=self.__headers,
             data=genre,
         )
@@ -44,5 +44,3 @@ class GenreRepository:
             logout()
             return None
         raise Exception(f'Error to recive data from API. Status code {response.status_code}')
-
-        

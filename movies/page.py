@@ -2,7 +2,7 @@
 Página de filmes.
 """
 import pandas as pd
-import streamlit as st  
+import streamlit as st
 from datetime import datetime
 from st_aggrid import AgGrid
 from actors.service import ActorService
@@ -45,7 +45,7 @@ def show_movies():
         max_value=datetime.today(),
         format='DD/MM/YYYY',
     )
-    
+
     genre_service = GenreService()
     genres = genre_service.get_genres()
     genre_names = {genre['name']: genre['id'] for genre in genres}
@@ -71,4 +71,3 @@ def show_movies():
             st.rerun()
         else:
             st.error('Wrong to add new movie. See the fields')
-

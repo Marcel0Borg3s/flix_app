@@ -27,7 +27,7 @@ def show_home():
         st.write(f"{genre['genre__name']}: {genre['count']}")
 
     st.subheader("Total Reviews:")
-    st.write(movie_stats['total_reviews'])  
+    st.write(movie_stats['total_reviews'])
 
     st.subheader("Average Rating:")
     st.write(movie_stats['average_stars'])

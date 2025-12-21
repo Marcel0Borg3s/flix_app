@@ -28,7 +28,7 @@ def show_reviews():
         )
     else:
         st.warning('No reviews found')
-    
+
     st.subheader("Add NewReview")
 
     movie_service = MovieService()
